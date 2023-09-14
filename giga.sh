@@ -174,16 +174,16 @@ function commands() {
       printf "Choose a catagory:\n"
       printf "${GRAY}custom${NC}\n"
       printf "${CYAN}OSINT${NC}\n"
-      printf "${PISS}(search)ing${NC}\n"
       printf "${GAY}OpenDirectory(opend)${NC}\n"
       printf "${TERRY}nmap${NC}\n"
       printf "${TERRY}scripts{$NC}\n"
-		  printf "${LBLU}dorking${NC}\n"
-      printf "bspwm"
+      printf "${LBLU}dorking${NC}\n"
+      printf "bspwm\n"
       printf "sudo chown byproxy:wheel to take back a file you should own\n"
       printf "brightnesctl set 10000\n"
       printf "nmtui = Network manager terminal interface\n"
       printf "usbdeath\n"
+      printf "https://pie.dev/status/418 - status code reminders\n"
     fi
 
    if [ "$1" = "osint" ]
@@ -232,7 +232,7 @@ function commands() {
 		printf 'Github thingies: filetype:inc php -site:github.com -site:sourceforge.net\n'
 		printf 'Expose PHP variables: filetype:php "Notice: Undefined variable: data in" -forum\n'
 		printf 'WAMPServers: intitle:"WAMPSERVER homepage" "Server Configuration" "Apache Version"\n'
-      printf 'intitle:"SecureWEB"'
+      	printf 'intitle:"SecureWEB"'
    fi
 
 	if [ "$1" = "programs" ]
@@ -293,15 +293,15 @@ function commands() {
 
    if [ "$1" = "scripts" ]
    then
-   	printf "${LGRAY}default - Scripts that are ran when using -sC or -A.\n"
+   	  printf "${LGRAY}default - Scripts that are ran when using -sC or -A.\n"
 	  printf "${LGREEN}safe - Scripts that aren't designed to crash services, use large amounts of bandwidth or exploits. A bit more sysadmin friendly. Almost.\n"
 	  printf "${LRED}auth - Authentication credentials (and bypassing them). No bruteforce.\n"
-	  printf "${ORANGE}broadcast - Scripts that broadcast on the local network.\n"
+	  printf "${PISS}broadcast - Scripts that broadcast on the local network.\n"
 	  printf "${RED}brute - Automate bruteforce attacks to guess the auth creds of a target.\n"
-	  printf "${ORANGE}discovery - Tries to actively discover more about the network by querying third parties.\n"
+	  printf "${PISS}discovery - Tries to actively discover more about the network by querying third parties.\n"
 	  printf "${RED}dos - Scripts that may cause a denial of service. May also crash the target system.\n"
-	  printf "${RED}exploit - Actively exploit some vulnerability\n."
-	  printf "${ORANGE}external - May send data to third-party databases.\n"
+	  printf "${RED}exploit - Actively exploit some vulnerability.\n"
+	  printf "${PISS}external - May send data to third-party databases.\n"
 	  printf "${RED}fuzzer - Scripts which are designed to send unexpected or randomized fields in each packet. It's slow, bandwidth intensive and may cause a DoS or crash the target.\n"
 	  printf "${RED}intrusive - High chance of harming the target system.\n"
 	  printf "${LRED}malware - Checks whether the target is infected with malware or backdoors.\n"
