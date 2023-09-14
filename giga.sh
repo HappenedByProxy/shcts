@@ -15,7 +15,6 @@ GRAY='\033[1;30m'
 LGRAY='\033[0;37m'
 NC='\033[0m'
 
-
 # List unique files in a folder
 function files() {
    find . -type f | sed -e 's/.*\.//' | sed -e 's/.*\///' | sort | uniq -c | sort -rn
@@ -178,12 +177,7 @@ function commands() {
       printf "${TERRY}nmap${NC}\n"
       printf "${TERRY}scripts{$NC}\n"
       printf "${LBLU}dorking${NC}\n"
-      printf "bspwm\n"
-      printf "sudo chown byproxy:wheel to take back a file you should own\n"
-      printf "brightnesctl set 10000\n"
-      printf "nmtui = Network manager terminal interface\n"
-      printf "usbdeath\n"
-      printf "https://pie.dev/status/418 - status code reminders\n"
+      printf "etc\n"
     fi
 
    if [ "$1" = "osint" ]
@@ -306,5 +300,14 @@ function commands() {
 	  printf "${RED}intrusive - High chance of harming the target system.\n"
 	  printf "${LRED}malware - Checks whether the target is infected with malware or backdoors.\n"
 	  printf "${RED}vuln - Check for specific known vulnerabilities.\n"
+   fi
+
+   if [ "$1" = "etc" ]
+   then
+      printf "sudo chown byproxy:wheel to take back a file you should own\n"
+      printf "brightnesctl set 10000\n"
+      printf "nmtui = Network manager terminal interface\n"
+      printf "usbdeath\n"
+      printf "https://pie.dev/status/418 - status code reminders\n"
    fi
 }
