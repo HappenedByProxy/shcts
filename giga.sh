@@ -1,5 +1,5 @@
 function best() {
-  yt-dlp --format '(bestvideo[vcodec^=av01][height>=4320][fps>30]/bestvideo[vcodec^=vp9.2][height>=4320][fps>$a'
+  yt-dlp --format '(bestvideo[vcodec^=av01][height>=4320][fps>30]/bestvideo[vcodec^=vp9.2][height>=4320][fps>30]/bestvideo[vcodec^=vp9][height>=4320][fps>30]/bestvideo[vcodec^=avc1][height>=4320][fps>30]/bestvideo[height>=432$$>=144]/bestvideo)+(bestaudio[acodec^=opus]/bestaudio)/best' --add-metadata --ignore-errors --no-continue --no-overwrites --download-archive archive.log --merge-output-format mkv --check-formats --concurrent-fragments 5 $1
 }
 
 function quick-warc {
